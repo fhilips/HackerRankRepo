@@ -1,7 +1,9 @@
 package com.hackerrank.problems;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -13,6 +15,31 @@ import java.text.SimpleDateFormat;
  */
 public class TimeConversion {
 
+    public static void main(String[] args) throws ParseException {
 
+    String twelveHoursTime = "12:01:00AM";
+
+    Result.timeConversion(twelveHoursTime); // 00:01:00
+
+    }
+
+}
+
+class Result {
+
+    public static String timeConversion(String s) throws ParseException {
+
+        DateFormat df = new SimpleDateFormat("hh:mm:ssaa");
+
+        DateFormat outputformat = new SimpleDateFormat("HH:mm:ss");
+        Date date;
+
+        date = df.parse(s);
+
+        String output = outputformat.format(date);
+        System.out.println(output);
+
+        return output;
+    }
 
 }
