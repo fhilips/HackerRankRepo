@@ -1,4 +1,4 @@
-package com.hackerrank.problems;
+package com.hackerrank.problems.easy;
 
 import java.text.DateFormat;
 import java.text.ParseException;
